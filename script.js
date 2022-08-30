@@ -185,6 +185,12 @@ class Calculator {
       case 'A':
         allClear = 1
       break
+      case 'Delete':
+        allClear = 1
+      break
+      case 'Backspace':
+        clear = 1
+      break
       case 'M':
         plusminus = 1
       break
