@@ -1,0 +1,38 @@
+.row > button{
+    height: 100px;
+    width: 100px;
+    border: none;
+    font-size: 50px;
+    color: white;
+    background-color: grey;
+}
+.row > button:hover{
+    background-color: rgba(128,128,128,0.5);
+}
+
+.row>.color{
+    background-color: rgba(109, 8, 8, 0.8);
+}
+
+.row>.color:hover{
+    background-color: rgba(109, 8, 8, 0.5) ;
+}
+
+.col.output{
+    border-radius: 25px 25px 0px 0px;
+    padding-top:20px;
+    background-color: black;
+    color: white;
+    width: 400px;
+    font-size: 50px;
+}
+.col.output>.operasi{
+    font-size: 30px;
+}
+
+.bot-rad-n{
+    border-radius: 0px 0px 25px 0px;
+}
+.bot-rad-r{
+    border-radius: 0px 0px 0px 25px;
+}
