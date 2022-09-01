@@ -25,6 +25,7 @@ class Calculator {
     chooseOperation(operation) {
       let selfcount
       const current = parseFloat(this.currentOperand)
+      if (this.currentOperand === '') return
       switch (operation) {
         case '%':
           selfcount = current / 100
@@ -37,7 +38,6 @@ class Calculator {
         default:
           break
       }
-      if (this.currentOperand === '') return
       if (this.previousOperand !== '') {
         this.compute()
       }
