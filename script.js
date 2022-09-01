@@ -1,3 +1,4 @@
+//program utama kalkulator
 var input = 0
 class Calculator {
     constructor(previousOperandTextElement, currentOperandTextElement) {
@@ -108,9 +109,11 @@ class Calculator {
   const allClearButton = document.querySelector('[data-all-clear]')
   const previousOperandTextElement = document.querySelector('[data-previous-operand]')
   const currentOperandTextElement = document.querySelector('[data-current-operand]')
-  
+  const tema = document.querySelector('[data-tema]')
   const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
-  
+
+  //inputan screen
+
   numberButtons.forEach(button => {
     button.addEventListener('click', () => {
       if (input){
@@ -147,6 +150,8 @@ class Calculator {
     calculator.delete()
     calculator.updateDisplay()
   })
+
+//inputan keyboard
 
   document.addEventListener('keydown', (event) =>{
     let operand
@@ -239,3 +244,29 @@ class Calculator {
       }
     }
   })
+
+//pengganti tema
+
+var r = document.querySelector(':root')
+var t = 0
+
+function theme_set() {
+    if(t){
+      r.style.setProperty('--text-primary', 'white')
+      r.style.setProperty('--bg-primary', 'grey')
+      r.style.setProperty('--bg-primary-shadow', 'rgba(128,128,128,0.5)')
+      r.style.setProperty('--bg-second','black')
+      t = 0
+      return
+    }
+    r.style.setProperty('--text-primary', 'rgb(74, 83, 37)')
+    r.style.setProperty('--bg-primary', 'rgb(218, 242, 129)')
+    r.style.setProperty('--bg-primary-shadow', 'rgba(218, 242, 129, 0.5)')
+    r.style.setProperty('--bg-second', 'rgba(68, 86, 3,0.3)')
+    t = 1
+ }
+
+
+tema.addEventListener('click', button => {
+  theme_set()
+})
